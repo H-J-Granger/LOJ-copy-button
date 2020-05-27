@@ -4,7 +4,7 @@
 	"description": "一个给 LOJ 添加复制按钮的 Chrome 插件",
 	"version": "1.0.0",
 	"content_scripts": [{
-		"js": ["main.js"],
+		"js": ["jquery.min.js", "main.js"],
 		"matches": ["https://loj.ac/*"]
 	}]
 }
