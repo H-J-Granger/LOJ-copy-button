@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function () {
 	$('pre').prepend('<a class="copy-button"><i class="copy outline icon"></i></a>');
 	$('.copy-button').css({
 		'position': 'relative',
@@ -6,7 +6,8 @@ $(document).ready(() => {
 		'font-size': '15px',
 		'cursor': 'pointer'
 	});
-	$('.copy-button').click(function () {
+	$('.copy-button').mousedown(function() {
+		$(this).css('color', 'green');
 		let text = $($(this).siblings('code')).text();
 		console.log(text);
 		let tmp = $('<textarea>');
@@ -14,5 +15,8 @@ $(document).ready(() => {
 		tmp.val(text).select();
 		document.execCommand('copy');
 		tmp.remove();
+	});
+	$('.copy-button').mouseup(function() {
+		$(this).css('color', '#4183c4');
 	});
 });
