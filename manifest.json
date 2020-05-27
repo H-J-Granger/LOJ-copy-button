@@ -1,0 +1,10 @@
+{
+	"manifest_version": 2,
+	"name": "LOJ copy button",
+	"description": "LOJ 怎么能少了复制按钮呢？",
+	"version": "1.0.0",
+	"content_scripts": [{
+		"js": ["main.js"],
+		"matches": ["https://loj.ac/*"]
+	}]
+}
